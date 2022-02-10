@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<div class="contain">
+    <header>
+        <h1 class="title">Liste des tâches</h1>
+
+        <form action="{{ path('create_task') }}" method="POST">
+            <input name="name" type="text" placeholder="Nom de la tâche..." id="name" class="form-control">
+            <textarea name="description" id="description" cols="10" rows="3" class="form-control"
+                      placeholder="Description du tâches..."></textarea>
+            <button type="submit" class="btn-lg btn btn-success">Ajouter une tâche</button>
+        </form>
+    </header>
+
+    <ul>
+    {% for task in taskes %}
+        <li class="{% if task.status %}checked{% endif %}">
+            <a href="{{ path('switch_task', {'id': task.id}) }}">
+                <span class="task-list_item">{{ task.name }}</span>
+            </a>
+            <a onclick="return confirm('Vous êtes sur de la suppression ?')" href="{{ path('delete_task', {'id': task.id}) }}">
+                <span class="close">X</span>
+            </a>
+        </li>
+        <span class="description">{{ task.description | raw }}</span>
+    {% else %}
+        <h4 class="title">Aucune tâche enregistrer</h4>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    background: #2780e3;
+    padding: 3rem 20%;
+}
+
+header .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+header form {}
+
+form input {
+    max-width: 100%;
+}
+
+form input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+form textarea {
+    margin: 10px 0;
+    padding: initial;
+}
+
+form button {
+    max-width: 100%;
+}
+
+.app ul {
+    width: 100%;
+    margin: 0;
+    padding: 2rem 20%;
+}
+
+ul .checked {
+    list-style-type: "\2714" !important;
+    background: rgba(255, 117, 24, .5) !important;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px auto;
+    width: 100%;
+    background: rgba(255, 117, 24, .2);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a:first-child {
+    width: 100%;
+    
+}
+
+li a:first-child:hover {
+    background: rgba(255, 117, 24, 1);  
+    color: #FFFFFF;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+
+li a:last-child:hover {
+    background: rgba(255, 0, 57, 1);  
+    color: #FFFFFF;
+}
+
+.checked .task-list_item {
+    text-decoration: line-through;
+}
+
+.description {
+    display: block;
+    padding: 10px;
+    font-style: italic;
+    font-size: 15px;
+}
+
